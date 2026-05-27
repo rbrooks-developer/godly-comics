@@ -24,10 +24,6 @@ const nunito = Nunito({
 export const metadata: Metadata = {
   ...buildMetadata(),
   manifest: "/manifest.webmanifest",
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
   other: {
     "theme-color": siteConfig.themeColor,
   },
