@@ -1,12 +1,23 @@
 import { ImageResponse } from "next/og";
+import { readFileSync } from "fs";
+import { join } from "path";
 import { siteConfig } from "@/lib/metadata";
 
-export const runtime = "edge";
 export const alt = siteConfig.name;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OgImage() {
+export default async function OgImage() {
+  // Read logo from public folder and encode as base64
+  const logoPath = join(process.cwd(), "public", "logo.png");
+  const logoData = readFileSync(logoPath);
+  const logoSrc = `data:image/png;base64,${logoData.toString("base64")}`;
+
+  // Load Cinzel Bold WOFF from @fontsource package (Satori supports TTF, OTF, WOFF)
+  const cinzelFont = readFileSync(
+    join(process.cwd(), "node_modules/@fontsource/cinzel/files/cinzel-latin-700-normal.woff")
+  );
+
   return new ImageResponse(
     (
       <div
@@ -18,10 +29,8 @@ export default function OgImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          fontFamily: "Georgia, serif",
           position: "relative",
           overflow: "hidden",
-          gap: "0px",
         }}
       >
         {/* Halftone dot pattern */}
@@ -31,7 +40,8 @@ export default function OgImage() {
             inset: 0,
             backgroundImage:
               "radial-gradient(circle, rgba(212,175,55,0.18) 1.5px, transparent 1.5px)",
-            backgroundSize: "24px 24px",
+            backgroundSize: "12px 12px",
+            display: "flex",
           }}
         />
 
@@ -41,76 +51,76 @@ export default function OgImage() {
             position: "absolute",
             inset: 0,
             background:
-              "radial-gradient(ellipse 55% 55% at 50% 50%, rgba(212,175,55,0.1) 0%, transparent 70%)",
+              "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(212,175,55,0.09) 0%, transparent 70%)",
+            display: "flex",
           }}
         />
 
-        {/* Gold border frame */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            border: "6px solid #D4AF37",
-          }}
+        {/* Logo */}
+        <img
+          src={logoSrc}
+          width={160}
+          height={160}
+          style={{ objectFit: "contain", marginBottom: "8px" }}
         />
-
-        {/* G lettermark */}
-        <div
-          style={{
-            fontSize: "160px",
-            fontWeight: "bold",
-            background: "linear-gradient(180deg, #FFE566 0%, #D4AF37 50%, #B8860B 100%)",
-            backgroundClip: "text",
-            color: "transparent",
-            lineHeight: 1,
-            filter: "drop-shadow(0 0 40px rgba(212,175,55,0.4))",
-          }}
-        >
-          G
-        </div>
 
         {/* Brand name */}
         <div
           style={{
-            fontSize: "80px",
-            fontWeight: "bold",
-            letterSpacing: "18px",
+            fontFamily: "Cinzel",
+            fontSize: "96px",
+            fontWeight: 700,
+            letterSpacing: "16px",
             textTransform: "uppercase",
             background: "linear-gradient(180deg, #FFE566 0%, #D4AF37 50%, #B8860B 100%)",
             backgroundClip: "text",
             color: "transparent",
             lineHeight: 1,
             marginTop: "16px",
+            display: "flex",
           }}
         >
-          GODLY COMICS
+          Godly Comics
         </div>
 
         {/* Thin gold rule */}
         <div
           style={{
-            width: "120px",
+            width: "96px",
             height: "1px",
             background: "#D4AF37",
             opacity: 0.6,
             marginTop: "28px",
+            display: "flex",
           }}
         />
 
-        {/* URL */}
+        {/* Tagline */}
         <div
           style={{
-            fontSize: "22px",
-            letterSpacing: "4px",
-            color: "#B8860B",
-            marginTop: "24px",
-            textTransform: "lowercase",
+            fontFamily: "Cinzel",
+            fontSize: "24px",
+            letterSpacing: "8px",
+            textTransform: "uppercase",
+            color: "rgba(255,254,240,0.5)",
+            marginTop: "20px",
+            display: "flex",
           }}
         >
-          godlycomics.com
+          Faith. Purpose. Story.
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [
+        {
+          name: "Cinzel",
+          data: cinzelFont,
+          style: "normal",
+          weight: 700,
+        },
+      ],
+    }
   );
 }
