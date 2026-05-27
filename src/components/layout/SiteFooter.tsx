@@ -91,20 +91,33 @@ export default function SiteFooter() {
 
           {/* Social icons */}
           <nav aria-label="Social media links">
-            <ul className="flex items-center gap-6 list-none m-0 p-0">
-              {socialLinks.map(({ label, href, icon }) => (
-                <li key={label}>
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={label}
-                    className="text-comic-gold hover:text-comic-gold-bright transition-colors duration-150"
-                  >
-                    {icon}
-                  </a>
-                </li>
+            <ul className="flex items-center gap-4 list-none m-0 p-0">
+              {socialLinks.map(({ label, href, icon }, index) => (
+                <>
+                  <li key={label}>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                      className="text-comic-gold hover:text-comic-gold-bright transition-colors duration-150"
+                    >
+                      {icon}
+                    </a>
+                  </li>
+                  {index < socialLinks.length - 1 && (
+                    <li key={`pipe-${index}`} aria-hidden="true" className="text-comic-gold/30 text-sm select-none">
+                      |
+                    </li>
+                  )}
+                </>
               ))}
+              <li aria-hidden="true" className="text-comic-gold/30 text-sm select-none">|</li>
+              <li>
+                <span className="font-display action-text text-xs tracking-[0.15em] text-comic-gold/60">
+                  @godlycomics
+                </span>
+              </li>
             </ul>
           </nav>
 
