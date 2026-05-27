@@ -15,10 +15,9 @@ export function organizationSchema() {
     },
     description: siteConfig.description,
     sameAs: [
-      // Update with your actual social profile URLs
-      `https://twitter.com/${siteConfig.twitterHandle.replace("@", "")}`,
       "https://www.instagram.com/godlycomics",
       "https://www.tiktok.com/@godlycomics",
+      "https://www.youtube.com/@godlycomics",
     ],
     contactPoint: {
       "@type": "ContactPoint",
