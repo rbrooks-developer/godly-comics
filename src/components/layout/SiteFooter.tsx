@@ -51,9 +51,6 @@ export default function SiteFooter() {
   return (
     <footer className="bg-comic-black border-t-[4px] border-comic-gold halftone-dark">
       <div className="container mx-auto px-4 py-12 max-w-6xl">
-        {/* Divider */}
-        <div className="panel-divider mb-10" aria-hidden="true" />
-
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
           <Link href="/" aria-label="Godly Comics — home">
@@ -87,6 +84,8 @@ export default function SiteFooter() {
             >
               E: alexisamaan@gmail.com
             </a>
+
+            <div className="w-full h-px bg-comic-gold opacity-30" aria-hidden="true" />
 
             {/* Social icons */}
             <nav aria-label="Social media links" className="mt-1">
