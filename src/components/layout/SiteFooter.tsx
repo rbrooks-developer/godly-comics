@@ -66,7 +66,7 @@ export default function SiteFooter() {
             />
           </Link>
 
-          {/* Founder contact */}
+          {/* Founder contact + social icons */}
           <div className="flex flex-col items-center gap-3 text-center">
             <p className="font-display action-text tracking-[0.15em] text-comic-gold text-base">
               Alexi Samaan
@@ -87,39 +87,39 @@ export default function SiteFooter() {
             >
               E: alexisamaan@gmail.com
             </a>
-          </div>
 
-          {/* Social icons */}
-          <nav aria-label="Social media links">
-            <ul className="flex items-center gap-4 list-none m-0 p-0">
-              {socialLinks.map(({ label, href, icon }, index) => (
-                <>
-                  <li key={label}>
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={label}
-                      className="text-comic-gold hover:text-comic-gold-bright transition-colors duration-150"
-                    >
-                      {icon}
-                    </a>
-                  </li>
-                  {index < socialLinks.length - 1 && (
-                    <li key={`pipe-${index}`} aria-hidden="true" className="text-comic-gold/30 text-sm select-none">
-                      |
+            {/* Social icons */}
+            <nav aria-label="Social media links" className="mt-1">
+              <ul className="flex items-center gap-4 list-none m-0 p-0">
+                {socialLinks.map(({ label, href, icon }, index) => (
+                  <>
+                    <li key={label}>
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={label}
+                        className="text-comic-gold hover:text-comic-gold-bright transition-colors duration-150"
+                      >
+                        {icon}
+                      </a>
                     </li>
-                  )}
-                </>
-              ))}
-              <li aria-hidden="true" className="text-comic-gold/30 text-sm select-none">|</li>
-              <li>
-                <span className="font-display action-text text-xs tracking-[0.15em] text-comic-gold/60">
-                  @godlycomics
-                </span>
-              </li>
-            </ul>
-          </nav>
+                    {index < socialLinks.length - 1 && (
+                      <li key={`pipe-${index}`} aria-hidden="true" className="text-comic-gold/30 text-sm select-none">
+                        |
+                      </li>
+                    )}
+                  </>
+                ))}
+                <li aria-hidden="true" className="text-comic-gold/30 text-sm select-none">|</li>
+                <li>
+                  <span className="font-display action-text text-xs tracking-[0.15em] text-comic-gold/60">
+                    @godlycomics
+                  </span>
+                </li>
+              </ul>
+            </nav>
+          </div>
 
           {/* Copyright */}
           <p className="font-body text-sm text-comic-gold/60 text-center">
