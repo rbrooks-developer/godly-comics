@@ -67,23 +67,23 @@ export default function SiteFooter() {
           </Link>
 
           {/* Founder contact + social icons */}
-          <div className="flex flex-col items-center gap-3 text-center">
+          <div className="flex flex-col items-start gap-3 text-left">
             <p className="font-display action-text tracking-[0.15em] text-comic-gold text-base">
               Alexi Samaan
             </p>
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-comic-white/40">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-comic-gold/60">
               Founder &amp; Creator
             </p>
             <div className="w-8 h-px bg-comic-gold opacity-30" aria-hidden="true" />
             <a
               href="tel:6197799143"
-              className="font-body text-sm text-comic-white/60 hover:text-comic-gold transition-colors duration-150"
+              className="font-body text-sm text-comic-gold/70 hover:text-comic-gold transition-colors duration-150"
             >
               T: 619.779.9143
             </a>
             <a
               href="mailto:alexisamaan@gmail.com"
-              className="font-body text-sm text-comic-white/60 hover:text-comic-gold transition-colors duration-150"
+              className="font-body text-sm text-comic-gold/70 hover:text-comic-gold transition-colors duration-150"
             >
               E: alexisamaan@gmail.com
             </a>
