@@ -24,7 +24,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col items-center gap-6 px-4 text-center">
         {/* Logo */}
         <Image
-          src="/logo.svg"
+          src="/logo.png"
           alt="Godly Comics"
           width={140}
           height={140}

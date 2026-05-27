@@ -7,7 +7,7 @@ export default function SiteHeader() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between max-w-6xl">
         <Link href="/" aria-label="Godly Comics — home">
           <Image
-            src="/logo.svg"
+            src="/logo.png"
             alt="Godly Comics"
             width={52}
             height={52}

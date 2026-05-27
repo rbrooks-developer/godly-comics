@@ -58,7 +58,7 @@ export default function SiteFooter() {
           {/* Logo */}
           <Link href="/" aria-label="Godly Comics — home">
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="Godly Comics"
               width={64}
               height={64}

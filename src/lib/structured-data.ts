@@ -9,7 +9,7 @@ export function organizationSchema() {
     url: siteConfig.url,
     logo: {
       "@type": "ImageObject",
-      url: `${siteConfig.url}/logo.svg`,
+      url: `${siteConfig.url}/logo.png`,
       width: 300,
       height: 300,
     },
