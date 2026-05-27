@@ -4,7 +4,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Godly Comics",
+  title: "Godly Comics - Faith. Purpose. Story.",
   description:
     "Epic comic book adventures featuring divine heroes and legendary characters. Discover Godly Comics — comics that transcend the ordinary.",
   path: "/",
