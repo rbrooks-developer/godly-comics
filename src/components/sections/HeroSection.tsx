@@ -40,11 +40,6 @@ export default function HeroSection() {
         {/* Thin gold rule */}
         <div className="w-24 h-px bg-comic-gold opacity-60" aria-hidden="true" />
 
-        {/* Tagline — update this line with your brand one-liner */}
-        <p className="font-body text-sm md:text-base tracking-[0.25em] uppercase text-comic-white/50 max-w-xs">
-          Divine. Bold. Iconic.
-        </p>
-
         {/* CTA */}
         <div className="mt-4">
           <ComicButton href="#about" variant="ghost" size="sm">
