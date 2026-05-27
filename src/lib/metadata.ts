@@ -32,7 +32,7 @@ type BuildMetadataOptions = {
 };
 
 export function buildMetadata({
-  title = `${siteConfig.name} — ${siteConfig.tagline}`,
+  title = siteConfig.name,
   description = siteConfig.description,
   path = "/",
   ogImage = siteConfig.ogImage,
