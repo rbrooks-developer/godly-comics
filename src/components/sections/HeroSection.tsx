@@ -1,9 +1,12 @@
 import Image from "next/image";
 import ComicButton from "@/components/ui/ComicButton";
+import HalftonePanel from "@/components/ui/HalftonePanel";
 
 export default function HeroSection() {
   return (
-    <section
+    <HalftonePanel
+      as="section"
+      dotSize="sm"
       className="relative flex min-h-[100svh] flex-col items-center justify-center bg-comic-black overflow-hidden"
       aria-labelledby="hero-heading"
     >
@@ -56,6 +59,6 @@ export default function HeroSection() {
         }}
         aria-hidden="true"
       />
-    </section>
+    </HalftonePanel>
   );
 }
