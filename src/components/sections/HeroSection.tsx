@@ -1,136 +1,66 @@
 import Image from "next/image";
 import ComicButton from "@/components/ui/ComicButton";
-import ActionWord from "@/components/ui/ActionWord";
-import HalftonePanel from "@/components/ui/HalftonePanel";
 
 export default function HeroSection() {
   return (
-    <HalftonePanel
-      as="section"
-      dotSize="sm"
-      className="relative min-h-[92vh] bg-comic-black flex items-center overflow-hidden"
+    <section
+      className="relative flex min-h-[100svh] flex-col items-center justify-center bg-comic-black overflow-hidden"
       aria-labelledby="hero-heading"
     >
-      {/* Decorative action words */}
-      <ActionWord
-        word="DIVINE!"
-        color="gold"
-        className="absolute top-6 right-6 -rotate-12 text-5xl md:text-6xl opacity-60"
-      />
-      <ActionWord
-        word="EPIC!"
-        color="gold-bright"
-        className="absolute bottom-16 left-4 rotate-6 text-3xl md:text-4xl opacity-50 hidden md:block"
-      />
-      <ActionWord
-        word="POW!"
-        color="gold"
-        className="absolute top-1/3 right-[5%] rotate-3 text-2xl opacity-30 hidden lg:block"
+      {/* Subtle radial glow behind the logo */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(212,175,55,0.07) 0%, transparent 70%)",
+        }}
+        aria-hidden="true"
       />
 
-      {/* Gold top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-comic-gold" aria-hidden="true" />
+      {/* Content — stacked vertically, centered */}
+      <div className="relative z-10 flex flex-col items-center gap-6 px-4 text-center">
+        {/* Logo */}
+        <Image
+          src="/logo.svg"
+          alt="Godly Comics"
+          width={140}
+          height={140}
+          priority
+          className="w-28 h-28 md:w-36 md:h-36 object-contain drop-shadow-[0_0_24px_rgba(212,175,55,0.35)]"
+        />
 
-      <div className="container mx-auto px-4 py-16 max-w-6xl w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        {/* Brand name */}
+        <h1
+          id="hero-heading"
+          className="font-display action-text tracking-[0.2em] text-5xl md:text-7xl lg:text-8xl text-gold-gradient leading-none"
+        >
+          Godly Comics
+        </h1>
 
-          {/* Text column */}
-          <div className="space-y-8 z-10">
-            {/* Logo mark */}
-            <div className="inline-block gold-border bg-comic-black p-3">
-              <Image
-                src="/logo.svg"
-                alt="Godly Comics logo"
-                width={96}
-                height={96}
-                priority
-                className="w-24 h-24 object-contain"
-              />
-            </div>
+        {/* Thin gold rule */}
+        <div className="w-24 h-px bg-comic-gold opacity-60" aria-hidden="true" />
 
-            {/* Main heading */}
-            <h1
-              id="hero-heading"
-              className="font-display action-text leading-none"
-            >
-              <span className="block text-6xl md:text-7xl lg:text-8xl text-gold-gradient">
-                GODLY
-              </span>
-              <span className="block text-5xl md:text-6xl lg:text-7xl text-comic-white mt-1">
-                COMICS
-              </span>
-              <span
-                className="block text-2xl md:text-3xl mt-3 text-comic-gold border-t-[3px] border-comic-gold pt-3"
-              >
-                Divine Stories for Every Hero
-              </span>
-            </h1>
+        {/* Tagline — update this line with your brand one-liner */}
+        <p className="font-body text-sm md:text-base tracking-[0.25em] uppercase text-comic-white/50 max-w-xs">
+          Divine. Bold. Iconic.
+        </p>
 
-            {/* Tagline */}
-            <p className="font-body text-lg md:text-xl text-comic-white/80 gold-border bg-comic-charcoal p-4 max-w-md leading-relaxed">
-              Epic adventures. Legendary characters.{" "}
-              <strong className="text-comic-gold">
-                Comics that transcend the ordinary.
-              </strong>
-            </p>
-
-            {/* CTA */}
-            <div className="flex flex-wrap gap-4">
-              <ComicButton href="#about" variant="primary" size="lg">
-                Read Our Story
-              </ComicButton>
-              <ComicButton
-                href="mailto:hello@godlycomics.com"
-                variant="secondary"
-                size="lg"
-              >
-                Get In Touch
-              </ComicButton>
-            </div>
-          </div>
-
-          {/* Hero artwork column */}
-          <div className="relative flex justify-center items-center z-10">
-            <div
-              className="relative w-full max-w-sm gold-border-lg bg-comic-charcoal
-                          rotate-1 hover:rotate-0 transition-transform duration-300"
-            >
-              {/* Replace this placeholder with your actual hero artwork */}
-              <div className="aspect-[3/4] flex flex-col items-center justify-center p-8 gap-4">
-                <Image
-                  src="/logo.svg"
-                  alt="Godly Comics hero artwork"
-                  width={200}
-                  height={200}
-                  className="w-40 h-40 object-contain opacity-80"
-                />
-                <p className="font-display action-text text-comic-gold text-center text-sm">
-                  Hero Artwork Coming Soon
-                </p>
-                <p className="font-body text-comic-white/50 text-xs text-center">
-                  Drop your artwork at{" "}
-                  <code className="text-comic-gold">/public/hero-art.png</code>
-                  {" "}and update the{" "}
-                  <code className="text-comic-gold">src</code> prop above
-                </p>
-              </div>
-
-              {/* Comic-style corner fold */}
-              <div
-                className="absolute bottom-0 right-0 w-8 h-8"
-                style={{
-                  background:
-                    "linear-gradient(225deg, #1a1a1a 50%, #d4af37 50%)",
-                }}
-                aria-hidden="true"
-              />
-            </div>
-          </div>
+        {/* CTA */}
+        <div className="mt-4">
+          <ComicButton href="#about" variant="ghost" size="sm">
+            Our Story
+          </ComicButton>
         </div>
       </div>
 
-      {/* Gold bottom accent */}
-      <div className="absolute bottom-0 left-0 right-0 panel-divider" aria-hidden="true" />
-    </HalftonePanel>
+      {/* Bottom fade — blends into the next section */}
+      <div
+        className="pointer-events-none absolute bottom-0 left-0 right-0 h-24"
+        style={{
+          background: "linear-gradient(to bottom, transparent, #1a1a1a)",
+        }}
+        aria-hidden="true"
+      />
+    </section>
   );
 }
