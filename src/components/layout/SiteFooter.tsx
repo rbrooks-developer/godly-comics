@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/metadata";
 const socialLinks = [
   { label: "Twitter / X", href: `https://twitter.com/godlycomics` },
   { label: "Instagram", href: "https://instagram.com/godlycomics" },
-  { label: "Facebook", href: "https://facebook.com/godlycomics" },
+  { label: "TikTok", href: "https://www.tiktok.com/@godlycomics" },
 ];
 
 export default function SiteFooter() {
