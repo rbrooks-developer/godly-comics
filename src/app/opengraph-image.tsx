@@ -72,7 +72,7 @@ export default async function OgImage() {
             fontWeight: 700,
             letterSpacing: "16px",
             textTransform: "uppercase",
-            background: "linear-gradient(180deg, #FFE566 0%, #D4AF37 50%, #B8860B 100%)",
+            background: "linear-gradient(135deg, #b8860b 0%, #d4af37 20%, #fff3a3 45%, #ffd700 65%, #b8860b 100%)",
             backgroundClip: "text",
             color: "transparent",
             lineHeight: 1,

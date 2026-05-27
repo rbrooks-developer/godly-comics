@@ -49,7 +49,7 @@ body {
 @utility halftone {
   background-image: radial-gradient(
     circle,
-    rgba(212, 175, 55, 0.18) 1.5px,
+    rgba(212, 175, 55, 0.28) 1.5px,
     transparent 1.5px
   );
   background-size: 12px 12px;
@@ -121,9 +121,11 @@ body {
 @utility text-gold-gradient {
   background: linear-gradient(
     135deg,
-    var(--color-comic-gold-bright) 0%,
-    var(--color-comic-gold) 40%,
-    var(--color-comic-gold-deep) 100%
+    #b8860b 0%,
+    #d4af37 20%,
+    #fff3a3 45%,
+    #ffd700 65%,
+    #b8860b 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
