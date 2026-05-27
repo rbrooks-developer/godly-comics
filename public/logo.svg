@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer circle ring -->
+  <circle cx="100" cy="100" r="94" fill="none" stroke="#D4AF37" stroke-width="4"/>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#B8860B" stroke-width="1.5"/>
+
+  <!-- Background -->
+  <circle cx="100" cy="100" r="83" fill="#1A1A1A"/>
+
+  <!-- Laurel-style decorative arcs (top) -->
+  <path d="M 30 70 Q 50 30 100 20 Q 150 30 170 70" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 38 75 Q 55 40 100 30 Q 145 40 162 75" fill="none" stroke="#B8860B" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 3"/>
+
+  <!-- Laurel-style decorative arcs (bottom) -->
+  <path d="M 30 130 Q 50 170 100 180 Q 150 170 170 130" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 38 125 Q 55 160 100 170 Q 145 160 162 125" fill="none" stroke="#B8860B" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 3"/>
+
+  <!-- Gold G letter -->
+  <text
+    x="100"
+    y="132"
+    font-family="Georgia, serif"
+    font-size="110"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="url(#goldGrad)"
+  >G</text>
+
+  <!-- Gold gradient definition -->
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE566;stop-opacity:1"/>
+      <stop offset="40%" style="stop-color:#D4AF37;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+</svg>
