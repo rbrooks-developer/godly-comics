@@ -64,7 +64,7 @@ export default function AboutSection() {
             </div>
 
             <ComicButton
-              href="mailto:hello@godlycomics.com"
+              href="mailto:alexisamaan@gmail.com"
               variant="primary"
               size="md"
             >

@@ -28,7 +28,7 @@ export default function SiteHeader() {
             </li>
             <li>
               <Link
-                href="mailto:hello@godlycomics.com"
+                href="mailto:alexisamaan@gmail.com"
                 className="font-display action-text text-comic-black bg-comic-gold border-[2px] border-comic-black px-4 py-2 text-sm
                            shadow-[3px_3px_0px_#1a1a1a] hover:shadow-[1px_1px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px]
                            transition-all duration-100"

@@ -23,7 +23,7 @@ export function organizationSchema() {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
-      email: "hello@godlycomics.com",
+      email: "alexisamaan@gmail.com",
     },
   };
 }
