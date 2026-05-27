@@ -71,7 +71,6 @@ export default function SiteFooter() {
             <p className="font-body text-xs tracking-[0.2em] uppercase text-comic-gold/60">
               Founder &amp; Creator
             </p>
-            <div className="w-8 h-px bg-comic-gold opacity-30" aria-hidden="true" />
             <a
               href="tel:6197799143"
               className="font-body text-sm text-comic-gold/70 hover:text-comic-gold transition-colors duration-150"
