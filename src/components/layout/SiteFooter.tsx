@@ -73,7 +73,7 @@ export default function SiteFooter() {
             </p>
             <a
               href="tel:6197799143"
-              className="font-body text-sm text-comic-gold/70 hover:text-comic-gold transition-colors duration-150"
+              className="font-body text-sm text-comic-gold/70 hover:text-comic-gold transition-colors duration-150 mt-3"
             >
               T: 619.779.9143
             </a>
