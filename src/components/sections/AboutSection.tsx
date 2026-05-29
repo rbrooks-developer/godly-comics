@@ -1,11 +1,7 @@
-import HalftonePanel from "@/components/ui/HalftonePanel";
-
 export default function AboutSection() {
   return (
-    <HalftonePanel
-      as="section"
+    <section
       id="about"
-      dotSize="dark"
       className="bg-comic-charcoal py-32 px-4"
       aria-labelledby="about-heading"
     >
@@ -23,6 +19,6 @@ export default function AboutSection() {
           Coming Soon
         </p>
       </div>
-    </HalftonePanel>
+    </section>
   );
 }
