@@ -49,7 +49,7 @@ export default function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-comic-black border-t-[4px] border-comic-gold halftone-dark">
+    <footer className="bg-comic-black border-t-[4px] border-comic-gold">
       <div className="container mx-auto px-4 py-12 max-w-6xl">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}

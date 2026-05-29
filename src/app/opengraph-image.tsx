@@ -33,18 +33,6 @@ export default async function OgImage() {
           overflow: "hidden",
         }}
       >
-        {/* Halftone dot pattern — SVG pattern works reliably in Satori */}
-        <svg
-          style={{ position: "absolute", inset: 0, width: "1200px", height: "630px" }}
-        >
-          <defs>
-            <pattern id="dots" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
-              <circle cx="9" cy="9" r="1.5" fill="rgba(212,175,55,0.25)" />
-            </pattern>
-          </defs>
-          <rect width="1200" height="630" fill="url(#dots)" />
-        </svg>
-
         {/* Radial gold glow */}
         <div
           style={{
