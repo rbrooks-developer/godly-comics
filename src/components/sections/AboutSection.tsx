@@ -10,7 +10,7 @@ export default function AboutSection() {
           id="about-heading"
           className="font-display action-text tracking-[0.2em] text-3xl md:text-4xl text-comic-gold"
         >
-          Our Story
+          Services
         </h2>
 
         <div className="w-12 h-px bg-comic-gold opacity-40" aria-hidden="true" />

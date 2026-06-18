@@ -48,7 +48,7 @@ export default function HeroSection() {
         {/* CTA */}
         <div className="mt-4">
           <ComicButton href="#about" variant="ghost" size="sm">
-            Our Story
+            Services
           </ComicButton>
         </div>
       </div>

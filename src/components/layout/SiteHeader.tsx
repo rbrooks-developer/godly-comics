@@ -23,7 +23,7 @@ export default function SiteHeader() {
                 href="#about"
                 className="font-display action-text text-comic-gold hover:text-comic-gold-bright text-base transition-colors duration-150"
               >
-                Our Story
+                Services
               </Link>
             </li>
             <li>
